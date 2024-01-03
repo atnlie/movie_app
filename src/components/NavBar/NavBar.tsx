@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import {Search, Bell} from 'react-feather';
 const NarBar = () => {
     return (
@@ -13,12 +13,12 @@ const NarBar = () => {
                     </Link>
                     <div className="text-red-600 font-bold text-xl w-full">ATNFLIX</div>
                 </div>
-                <nav className="main-nav mt-5">
-                    <Link to="/home">Home</Link>
-                    <Link to="/tvShows">TV Shows</Link>
+                <nav className="main-nav mt-5 space-x-5">
+                    <Link to="/">Home</Link>
+                    <Link to="/tvshow">TV Shows</Link>
                     <Link to="/movies">Movies</Link>
-                    <Link to="/new">New & Popular</Link>
-                    <Link to="#">My List</Link>
+                    <Link to="/popular">New & Popular</Link>
+                    <Link to="/mylist">My List</Link>
                     <Link to="https://www.linkedin.com/in/henikurniyanto/" target="_blank">My Profile</Link>
                 </nav>
                 <nav className="sub-nav flex space-x-5">
@@ -31,6 +31,8 @@ const NarBar = () => {
                     <Link to="#">Account</Link>
                 </nav>
             </header>
+
+            <Outlet />
         </>
     );
 }
