@@ -43,6 +43,18 @@ export const GetMovies = (mGenre?: string) => httpRequest<{results: IUpcoming[]}
     params: {limit: '12', genre: mGenre ?? ''},
 });
 
+export const GetTypeMovie = (moviesType?: string) => httpRequest<{results: IUpcoming[]}>({
+    ...options,
+    url: '/titles',
+    params: {limit: '36', titleType: moviesType ?? 'movie', page: '3'},
+});
+
+export const GetNewMovies = () => httpRequest<{results: IUpcoming[]}>({
+    ...options,
+    url: '/titles',
+    params: {limit: '48', startYear: '2020', titleType: 'movie', page: '3'},
+});
+
 /* direct approach */
 export const GetGen = async () => {
     try {

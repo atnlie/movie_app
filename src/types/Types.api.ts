@@ -52,4 +52,6 @@ export interface IParams {
     page?: string;
     limit?: string;
     genre?: string;
+    titleType?: string;
+    startYear?: string;
 }
