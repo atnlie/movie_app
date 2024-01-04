@@ -1,10 +1,11 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import NavBar from "../components/NavBar/NavBar";
 import Home from "../pages/Home/Home";
 import Movies from "../pages/Movies/Movies";
 import MyList from "../pages/MyList/MyList";
 import NewPopular from "../pages/NewPopular/NewPopular";
 import TvShow from "../pages/TvShow/TvShow";
+import PageError from "../pages/Error/PageError";
 export default function RouterApp() {
     return (
         <Routes>
@@ -14,6 +15,7 @@ export default function RouterApp() {
                 <Route path="mylist" element={<MyList />} />
                 <Route path="popular" element={<NewPopular />} />
                 <Route path="tvshow" element={<TvShow />} />
+                <Route path="*" element={<PageError />} />
             </Route>
         </Routes>
     );
