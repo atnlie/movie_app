@@ -26,17 +26,15 @@ REACT_APP_API_KEY=[**your token here**]
 - Notifications
 
 ## Preview
-![Screenshot 2024-01-05 at 22.40.44.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.40.44.png)
-![Screenshot 2024-01-05 at 22.40.35.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.40.35.png)
-![Screenshot 2024-01-05 at 22.38.51.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.38.51.png)
-![Screenshot 2024-01-05 at 22.38.18.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.38.18.png)
-![Screenshot 2024-01-05 at 22.38.09.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.38.09.png)
-![Screenshot 2024-01-05 at 22.38.00.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.38.00.png)
-![Screenshot 2024-01-05 at 22.37.41.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.37.41.png)
-![Screenshot 2024-01-05 at 22.37.26.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.37.26.png)
-![Screenshot 2024-01-05 at 22.37.12.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.37.12.png)
-
-
+![home-ss.png](Screeenshots%2Fhome-ss.png)
+![home-ss2.png](Screeenshots%2Fhome-ss2.png)
+![movies-ss.png](Screeenshots%2Fmovies-ss.png)
+![detail-movie-ss.png](Screeenshots%2Fdetail-movie-ss.png)
+![detail-ss.png](Screeenshots%2Fdetail-ss.png)
+![list-ss.png](Screeenshots%2Flist-ss.png)
+![mylist-nodata-ss.png](Screeenshots%2Fmylist-nodata-ss.png)
+![remove-list-ss.png](Screeenshots%2Fremove-list-ss.png)
+![search-ss.png](Screeenshots%2Fsearch-ss.png)
 
 ## Available Scripts
 
