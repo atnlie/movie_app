@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import {Search, Bell} from 'react-feather';
+import { Badge } from "@material-tailwind/react";
 const NarBar = () => {
     return (
         <>
@@ -22,13 +23,18 @@ const NarBar = () => {
                     <Link to="https://www.linkedin.com/in/henikurniyanto/" target="_blank">My Profile</Link>
                 </nav>
                 <nav className="sub-nav flex space-x-5">
+
                     <Link to="#">
                         <Search size={25}/>
                     </Link>
                     <Link to="#">
-                        <Bell/>
+                        <Badge content="5">
+                            <Bell/>
+                        </Badge>
                     </Link>
-                    <Link to="#">Account</Link>
+                    <Link to="#">
+                       Sign In
+                    </Link>
                 </nav>
             </header>
 

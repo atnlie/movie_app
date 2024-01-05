@@ -1,23 +1,38 @@
 import React from 'react';
+import { Button } from "@material-tailwind/react";
 import {IMovie} from "../../types/Types.api";
 
 const Details: React.FC<{movie: IMovie, onPress: () => void, addToList: () => void, removeList?: () => void, isFav?: boolean}> = ({movie, onPress, addToList, removeList, isFav}) => {
     const _buttonMyList = () => {
         if (isFav) {
             return (
-                <button data-ripple-light="true" type="button"
-                        onClick={removeList}
-                        className="select-none rounded-lg bg-yellow-500 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none inline-flex gap-2 items-center">
-                <span><img src='./remove.svg' width={24} height={24}/> </span> Remove
-                </button>
+                <Button
+                    placeholder={''}
+                    variant="gradient"
+                    color="yellow"
+                    className="group relative flex items-center gap-3 overflow-hidden pr-[64px]"
+                    onClick={removeList}
+                >
+                    Remove
+                    <span className="absolute right-0 grid h-full w-12 place-items-center bg-yellow-700 transition-colors group-hover:bg-light-blue-700">
+                              <img src="./remove.svg" alt="metamask" className="h-6 w-6" />
+                            </span>
+                </Button>
             );
         } else {
             return (
-                <button data-ripple-light="true" type="button"
-                        onClick={addToList}
-                        className="mr-3 select-none rounded-lg bg-blue-500 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none inline-flex gap-2 items-center">
-                    <span><img src='./check.svg' width={24} height={24}/> </span> Add To List
-                </button>
+                <Button
+                    placeholder={''}
+                    variant="gradient"
+                    color="light-blue"
+                    className="group relative flex items-center gap-3 overflow-hidden pr-[64px]"
+                    onClick={addToList}
+                >
+                    Add To List
+                    <span className="absolute right-0 grid h-full w-12 place-items-center bg-light-blue-600 transition-colors group-hover:bg-light-blue-700">
+                          <img src="./check.svg" alt="metamask" className="h-6 w-6" />
+                        </span>
+                </Button>
             );
         }
     }
@@ -56,13 +71,13 @@ const Details: React.FC<{movie: IMovie, onPress: () => void, addToList: () => vo
                             <p>Type :<span className="font-bold">{movie?.titleType?.text}</span></p>
                         </div>
                     </div>
+                    <div className={"flex"}>
+                        <Button color={"red"} onClick={onPress} placeholder={'Close'} className={"mr-2"}>
+                            Close
+                        </Button>
+                        <_buttonMyList />
+                    </div>
 
-                    <button data-ripple-light="true" type="button"
-                            onClick={onPress}
-                            className="mr-3 select-none rounded-lg bg-red-900 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                        Close
-                    </button>
-                    <_buttonMyList />
                 </div>
 
             </div>

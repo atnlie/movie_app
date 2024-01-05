@@ -2,7 +2,6 @@ import {useQuery} from "@tanstack/react-query";
 import Container from '../../components/Container/Container';
 import {GetUpcoming, GetMovies,} from "../../services/api";
 import MoviesSection from "../../components/Sections/Movies/MoviesSection";
-import UpcomingSection from "../../components/Sections/Movies/UpcomingSection";
 
 const Home = () => {
     const upComingQry = useQuery({
@@ -36,7 +35,7 @@ const Home = () => {
 
     return <Container>
         <section className="main-container">
-            {upComingQry?.data?.results && <UpcomingSection title='Upcoming Movies' movies={upComingQry?.data?.results} />}
+            {upComingQry?.data?.results && <MoviesSection title='Upcoming Movies' movies={upComingQry?.data?.results} />}
 
             {actionQry?.data?.results && <MoviesSection title='Action' movies={actionQry?.data?.results} />}
 

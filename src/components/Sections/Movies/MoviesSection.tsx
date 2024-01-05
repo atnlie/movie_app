@@ -7,6 +7,7 @@ import {useAppDispatch, useAppSelector} from "../../../hooks/Hooks";
 import { removeMovieList, addMovieList } from '../../../redux/WatchList/WatchListSlice';
 import { addMessage } from '../../../redux/Toast/ToastSlice';
 import {FindArrImovieById} from "../../../helpers/Array";
+import DetailsMovie from "../../Details/DetailsMovie";
 
 
 const MoviesSection: React.FC<{
@@ -60,7 +61,7 @@ const MoviesSection: React.FC<{
         <>
             <div className="bg-gray-500 bg-opacity-75">
                 <Modal>
-                    <Details movie={mdlMovie} onPress={_close} addToList={() => _addMovieToList(mdlMovie)} removeList={_removeMovieToList} isFav={isFav} />
+                    <DetailsMovie movie={mdlMovie} onPress={_close} addToList={() => _addMovieToList(mdlMovie)} removeList={_removeMovieToList} isFav={isFav} />
                 </Modal>
             </div>
 
