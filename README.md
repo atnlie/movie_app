@@ -7,13 +7,15 @@ This project inspired by Netflix to show movie database by categories
 - https://rapidapi.com/SAdrian/api/moviesdatabase 
 You need to subscribe to this api to allow you to accces endpoint moviesdatabase that is required to run this application as well.
 
+Copy `.env.sample` file to  `.env.local` and update value `REACT_APP_API_KEY` with yours.
+
 ---
 
-REACT_APP_BASE_URL_API=https://moviesdatabase.p.rapidapi.com 
+`REACT_APP_BASE_URL_API=https://moviesdatabase.p.rapidapi.com` 
 
-REACT_APP_HOST_API=moviesdatabase.p.rapidapi.com 
+`REACT_APP_HOST_API=moviesdatabase.p.rapidapi.com` 
 
-REACT_APP_API_KEY=[**your token here**] 
+`REACT_APP_API_KEY=[**your token here**]` 
 
 ---
 
