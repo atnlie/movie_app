@@ -1,6 +1,42 @@
-# Getting Started with Create React App
+# ATNFLIX App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project inspired by Netflix to show movie database by categories
+
+## Prerequisite
+- https://rapidapi.com/hub
+- https://rapidapi.com/SAdrian/api/moviesdatabase 
+You need to subscribe to this api to allow you to accces endpoint moviesdatabase that is required to run this application as well.
+
+REACT_APP_BASE_URL_API=https://moviesdatabase.p.rapidapi.com
+REACT_APP_HOST_API=moviesdatabase.p.rapidapi.com
+REACT_APP_API_KEY=[**your token here**]
+
+## Ready Features
+- Home
+- TV Show
+- Novies
+- New & Popular
+- My List (Add & Remove, but for AddToList you can perform from all pages excluding My List)
+- My Profile
+- Search
+- Toast Notification
+
+## Not Ready Features, yet
+- Authentication (signin, register, account profiles)
+- Notifications
+
+## Preview
+![Screenshot 2024-01-05 at 22.40.44.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.40.44.png)
+![Screenshot 2024-01-05 at 22.40.35.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.40.35.png)
+![Screenshot 2024-01-05 at 22.38.51.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.38.51.png)
+![Screenshot 2024-01-05 at 22.38.18.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.38.18.png)
+![Screenshot 2024-01-05 at 22.38.09.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.38.09.png)
+![Screenshot 2024-01-05 at 22.38.00.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.38.00.png)
+![Screenshot 2024-01-05 at 22.37.41.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.37.41.png)
+![Screenshot 2024-01-05 at 22.37.26.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.37.26.png)
+![Screenshot 2024-01-05 at 22.37.12.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-01-05%20at%2022.37.12.png)
+
+
 
 ## Available Scripts
 
@@ -39,8 +75,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Creator
+Atnlie@2023
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

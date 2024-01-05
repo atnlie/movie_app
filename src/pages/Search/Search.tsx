@@ -7,7 +7,7 @@ import {GetSearchMovies} from "../../services/api";
 import MoviesSection from "../../components/Sections/Movies/MoviesSection";
 
 const Search = () => {
-    const [searchKey, setSearchKey] = React.useState("");
+    const [searchKey, setSearchKey] = React.useState("war");
     const searchQry = useQuery({
         queryKey: ['searchMovies'],
         queryFn: () => GetSearchMovies(searchKey),
