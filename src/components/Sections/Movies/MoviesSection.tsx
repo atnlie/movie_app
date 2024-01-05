@@ -3,8 +3,10 @@ import { useModal } from 'react-hooks-use-modal';
 
 import {IMovie} from "../../../types/Types.api";
 import Details from "../../Details/Details";
-import {useAppDispatch} from "../../../hooks/Hooks";
+import {useAppDispatch, useAppSelector} from "../../../hooks/Hooks";
 import { removeMovieList, addMovieList } from '../../../redux/WatchList/WatchListSlice';
+import { addMessage } from '../../../redux/Toast/ToastSlice';
+import {FindArrImovieById} from "../../../helpers/Array";
 
 
 const MoviesSection: React.FC<{
@@ -16,6 +18,8 @@ const MoviesSection: React.FC<{
     const [mdlMovie, setMdlMovie] = useState({} as IMovie);
     const [idx, setIdx] = useState(0);
     const dispatch = useAppDispatch();
+    const MyList = useAppSelector((state) => state.watchList.MyMovies);
+
 
     const _close = () => {
         close();
@@ -28,21 +32,35 @@ const MoviesSection: React.FC<{
     }
 
     const _addMovieToList = (movie: IMovie) => {
-        dispatch(addMovieList(movie));
-        console.log('Sudah berhasil dimasukan');
+        if (FindArrImovieById(MyList, movie.id) !== undefined) {
+            dispatch(addMessage({
+                message: `This movie '${movie?.titleText?.text}' already exist.`,
+                type: 'warning',
+            }));
+        } else {
+            dispatch(addMovieList(movie));
+            dispatch(addMessage({
+                message: `This movie '${movie?.titleText?.text}' added to your list.`,
+                type: 'success',
+            }));
+        }
+
     }
 
-    const _removeMovieToList = (index: number) => {
+    const _removeMovieToList = () => {
         dispatch(removeMovieList(idx));
+        dispatch(addMessage({
+            message: `Your movie list '${mdlMovie?.titleText?.text}' has been removed.`,
+            type: 'warning',
+        }))
         close();
-        console.log('Sudah berhasil dihapus');
     }
 
     return (
         <>
             <div className="bg-gray-500 bg-opacity-75">
                 <Modal>
-                    <Details movie={mdlMovie} onPress={_close} addToList={() => _addMovieToList(mdlMovie)} removeList={() => _removeMovieToList(idx)} isFav={isFav} />
+                    <Details movie={mdlMovie} onPress={_close} addToList={() => _addMovieToList(mdlMovie)} removeList={_removeMovieToList} isFav={isFav} />
                 </Modal>
             </div>
 
