@@ -23,11 +23,15 @@ const MoviesSection: React.FC<{
         open();
     }
 
+    const _addMovieToList = () => {
+        console.log('Sudah berhasil dimasukan');
+    }
+
     return (
         <>
             <div className="bg-gray-500 bg-opacity-75">
                 <Modal>
-                    <Details movie={mdlMovie} onPress={_close} />
+                    <Details movie={mdlMovie} onPress={_close} addToList={_addMovieToList} />
                 </Modal>
             </div>
 
