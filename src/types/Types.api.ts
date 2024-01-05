@@ -1,4 +1,4 @@
-export interface IUpcoming {
+export interface IMovie {
     id: string;
     primaryImage:  {
         id: string;

@@ -1,6 +1,6 @@
 import axios from "axios";
 import axiosClient, {headers} from "./Axios/Axios";
-import {IUpcoming, IParams} from "../types/Types.api";
+import {IMovie, IParams} from "../types/Types.api";
 
 
 const httpRequest = <T>(req: {
@@ -31,25 +31,25 @@ export const GetGenres = () => httpRequest<{ results: string[] }>({
 });
 
 
-export const GetUpcoming = () => httpRequest<{results: IUpcoming[]}>({
+export const GetUpcoming = () => httpRequest<{results: IMovie[]}>({
     ...options,
     url: '/titles/x/upcoming',
     params: {page: '1', limit: '12'},
 });
 
-export const GetMovies = (mGenre?: string) => httpRequest<{results: IUpcoming[]}>({
+export const GetMovies = (mGenre?: string) => httpRequest<{results: IMovie[]}>({
     ...options,
     url: '/titles',
     params: {limit: '12', genre: mGenre ?? ''},
 });
 
-export const GetTypeMovie = (moviesType?: string) => httpRequest<{results: IUpcoming[]}>({
+export const GetTypeMovie = (moviesType?: string) => httpRequest<{results: IMovie[]}>({
     ...options,
     url: '/titles',
     params: {limit: '36', titleType: moviesType ?? 'movie', page: '3'},
 });
 
-export const GetNewMovies = () => httpRequest<{results: IUpcoming[]}>({
+export const GetNewMovies = () => httpRequest<{results: IMovie[]}>({
     ...options,
     url: '/titles',
     params: {limit: '48', startYear: '2020', titleType: 'movie', page: '3'},

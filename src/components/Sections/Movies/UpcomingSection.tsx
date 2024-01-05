@@ -1,6 +1,6 @@
 import React from 'react';
-import {IUpcoming} from '../../../types/Types.api';
-const UpcomingSection: React.FC<{ title: string, movies: IUpcoming[] }> = ({ title,  movies}) => {
+import {IMovie} from '../../../types/Types.api';
+const UpcomingSection: React.FC<{ title: string, movies: IMovie[] }> = ({ title,  movies}) => {
     return (
         <>
             <h1 id={title ?? 'Favorites'} className="text-2xl font-bold pb-5 grid-cols-5">{title ?? 'Favorites'}</h1>
