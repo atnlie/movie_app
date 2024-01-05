@@ -10,6 +10,7 @@ const UpcomingSection: React.FC<{ title: string, movies: IMovie[] }> = ({ title,
                     <img src={movie?.primaryImage?.url ?? './sampleMovies.jpg' }
                          alt={movie.titleText.text}
                          key={index}
+                         className="hover:cursor-pointer hover:scale-125"
                     />)}
             </div>
         </>

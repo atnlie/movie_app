@@ -55,3 +55,7 @@ export interface IParams {
     titleType?: string;
     startYear?: string;
 }
+
+export  interface InitState {
+    MyMovies: IMovie[];
+}
