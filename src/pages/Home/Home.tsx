@@ -1,4 +1,6 @@
 import {useQuery} from "@tanstack/react-query";
+import { Spinner } from "@material-tailwind/react";
+
 import Container from '../../components/Container/Container';
 import {GetUpcoming, GetMovies,} from "../../services/api";
 import MoviesSection from "../../components/Sections/Movies/MoviesSection";
@@ -35,15 +37,15 @@ const Home = () => {
 
     return <Container>
         <section className="main-container">
-            {upComingQry?.data?.results && <MoviesSection title='Upcoming Movies' movies={upComingQry?.data?.results} />}
+            {<MoviesSection title='Upcoming Movies' movies={upComingQry?.data?.results ?? []} />}
 
-            {actionQry?.data?.results && <MoviesSection title='Action' movies={actionQry?.data?.results} />}
+            {<MoviesSection title='Action' movies={actionQry?.data?.results ?? []} />}
 
-            {RomanceQry?.data?.results && <MoviesSection title='Romance' movies={RomanceQry?.data?.results} />}
+            {<MoviesSection title='Romance' movies={RomanceQry?.data?.results ?? []} />}
 
-            {adventureQry?.data?.results && <MoviesSection title='Adventure' movies={adventureQry?.data?.results} />}
+            {<MoviesSection title='Adventure' movies={adventureQry?.data?.results ?? []} />}
 
-            {animationQry?.data?.results && <MoviesSection title='Animation' movies={animationQry?.data?.results} />}
+            {<MoviesSection title='Animation' movies={animationQry?.data?.results ?? []} />}
 
         </section>
 

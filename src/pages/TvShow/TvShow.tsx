@@ -11,8 +11,7 @@ const TvShow = () => {
 
     return <Container>
         <section className="main-container">
-            {moviesQry?.data?.results &&
-                <MoviesSection title='TV Series' movies={moviesQry?.data?.results}/>}
+            {<MoviesSection title='TV Series' movies={moviesQry?.data?.results ?? []}/>}
         </section>
     </Container>
 }

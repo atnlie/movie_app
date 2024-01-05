@@ -2,7 +2,6 @@ import axios from "axios";
 import axiosClient, {headers} from "./Axios/Axios";
 import {IMovie, IParams} from "../types/Types.api";
 
-
 const httpRequest = <T>(req: {
     headers: {"X-RapidAPI-Host": string | undefined; "X-RapidAPI-Key": string | undefined;};
     method: string;

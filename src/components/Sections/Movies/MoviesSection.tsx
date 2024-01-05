@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import { useModal } from 'react-hooks-use-modal';
+import {Spinner} from "@material-tailwind/react";
 
 import {IMovie} from "../../../types/Types.api";
-import Details from "../../Details/Details";
+// import Details from "../../Details/Details";
 import {useAppDispatch, useAppSelector} from "../../../hooks/Hooks";
 import { removeMovieList, addMovieList } from '../../../redux/WatchList/WatchListSlice';
 import { addMessage } from '../../../redux/Toast/ToastSlice';
@@ -66,8 +67,9 @@ const MoviesSection: React.FC<{
             </div>
 
             <h1 id={title ?? 'Favorites'} className="text-2xl font-bold pb-5 grid-cols-5">{title ?? 'Favorites'}</h1>
+            {(movies?.length < 1) && <Spinner color={'red'} className="h-12 w-12 content-center" />}
             <div className="box">
-                {movies.map((movie, index) => {
+                {(movies?.length > 0) && movies?.map((movie, index) => {
                     return (
                         <>
                             <img className="hover:cursor-pointer hover:scale-125"

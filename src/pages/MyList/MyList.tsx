@@ -11,7 +11,7 @@ const MyList = () => {
                 <Container>
                     <section className="main-container">
                         {watchList?.MyMovies &&
-                            <MoviesSection title='My Favorite Videos' movies={watchList?.MyMovies} isFav={true} />}
+                            <MoviesSection title='My Favorite Videos' movies={watchList?.MyMovies ?? []} isFav={true} />}
                     </section>
                 </Container>
             );

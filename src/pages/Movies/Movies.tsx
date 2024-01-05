@@ -12,8 +12,7 @@ const Movies = () => {
 
     return <Container>
         <section className="main-container">
-            {moviesQry?.data?.results &&
-                <MoviesSection title='Movies' movies={moviesQry?.data?.results}/>}
+            {<MoviesSection title='Movies' movies={moviesQry?.data?.results ?? []} />}
         </section>
     </Container>
 }
