@@ -36,7 +36,8 @@ const MoviesSection: React.FC<{
                 {movies.map((movie, index) => {
                     return (
                         <>
-                            <img src={movie?.primaryImage?.url ?? './sampleMovies.jpg'}
+                            <img className="hover: cursor-pointer"
+                                src={movie?.primaryImage?.url ?? './sampleMovies.jpg'}
                                  alt={movie.titleText?.text}
                                  key={index}
                                  onClick={() => _open(movie)}

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {IMovie} from '../../../types/Types.api';
+
 const UpcomingSection: React.FC<{ title: string, movies: IMovie[] }> = ({ title,  movies}) => {
     return (
         <>

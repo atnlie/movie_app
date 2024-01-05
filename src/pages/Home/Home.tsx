@@ -34,10 +34,6 @@ const Home = () => {
         staleTime: 3600000,
     })
 
-    if(upComingQry.isFetched) {
-        console.log(upComingQry?.data?.results[0].titleText.text);
-    }
-
     return <Container>
         <section className="main-container">
             {upComingQry?.data?.results && <UpcomingSection title='Upcoming Movies' movies={upComingQry?.data?.results} />}
