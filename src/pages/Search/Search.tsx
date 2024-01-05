@@ -35,7 +35,6 @@ const Search = () => {
                         containerProps={{
                             className: "min-w-0",
                         }}
-                        // color={'red'}
                         color="white"
                     />
                     <Button
