@@ -5,6 +5,8 @@ This project inspired by Netflix to show movie database by categories
 ## Prerequisite
 - https://rapidapi.com/hub
 - https://rapidapi.com/SAdrian/api/moviesdatabase 
+
+
 You need to subscribe to this api to allow you to accces endpoint moviesdatabase that is required to run this application as well.
 
 Copy `.env.sample` file to  `.env.local` and update value `REACT_APP_API_KEY` with yours.
