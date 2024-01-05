@@ -6,6 +6,7 @@ import MyList from "../pages/MyList/MyList";
 import NewPopular from "../pages/NewPopular/NewPopular";
 import TvShow from "../pages/TvShow/TvShow";
 import PageError from "../pages/Error/PageError";
+import Search from "../pages/Search/Search";
 export default function RouterApp() {
     return (
         <Routes>
@@ -15,6 +16,7 @@ export default function RouterApp() {
                 <Route path="mylist" element={<MyList />} />
                 <Route path="popular" element={<NewPopular />} />
                 <Route path="tvshow" element={<TvShow />} />
+                <Route path="Search" element={<Search />} />
                 <Route path="*" element={<PageError />} />
             </Route>
         </Routes>

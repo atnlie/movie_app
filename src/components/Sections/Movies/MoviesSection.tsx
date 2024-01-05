@@ -3,7 +3,6 @@ import { useModal } from 'react-hooks-use-modal';
 import {Spinner} from "@material-tailwind/react";
 
 import {IMovie} from "../../../types/Types.api";
-// import Details from "../../Details/Details";
 import {useAppDispatch, useAppSelector} from "../../../hooks/Hooks";
 import { removeMovieList, addMovieList } from '../../../redux/WatchList/WatchListSlice';
 import { addMessage } from '../../../redux/Toast/ToastSlice';

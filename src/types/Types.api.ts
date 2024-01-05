@@ -59,3 +59,8 @@ export interface IParams {
 export  interface InitState {
     MyMovies: IMovie[];
 }
+
+export  interface InitSearchState {
+    SearchMovies: IMovie[];
+    Keyword: string;
+}

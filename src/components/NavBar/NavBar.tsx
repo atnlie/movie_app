@@ -24,7 +24,7 @@ const NarBar = () => {
                 </nav>
                 <nav className="sub-nav flex space-x-5">
 
-                    <Link to="#">
+                    <Link to="/search">
                         <Search size={25}/>
                     </Link>
                     <Link to="#">

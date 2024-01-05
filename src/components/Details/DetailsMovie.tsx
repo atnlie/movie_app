@@ -45,7 +45,6 @@ const DetailsMovie: React.FC<{movie: IMovie, onPress: () => void, addToList: () 
     }
 
     return (
-        // <Card className="w-full max-w-[48rem] flex-row" placeholder={''}>
         <Card className="w-full max-w-[60rem] flex-row" placeholder={''}>
             <CardHeader
                 placeholder={''}

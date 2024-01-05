@@ -54,6 +54,12 @@ export const GetNewMovies = () => httpRequest<{results: IMovie[]}>({
     params: {limit: '48', startYear: '2020', titleType: 'movie', page: '3'},
 });
 
+export const GetSearchMovies = (keyword: string) => httpRequest<{results: IMovie[]}>({
+    ...options,
+    url: `/titles/search/keyword/${keyword}`,
+    params: {limit: '48'},
+});
+
 /* direct approach */
 export const GetGen = async () => {
     try {
